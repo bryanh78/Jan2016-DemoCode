@@ -1,0 +1,26 @@
+.awesome-paragraph{
+	color : peachpuff;
+}
+/*Chained selector*/
+h1#my-id.important{
+
+}
+/*Id selector -dont do it!*/
+#super-paragraph{
+
+}
+/*Multiple selector*/
+p, div {
+	font-size : 42px;
+	padding:10px;
+}
+
+/*Descendant*/
+div h3{
+
+}
+/*Child*/
+div > h3{
+	color:green;
+}
+
