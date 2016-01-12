@@ -1,0 +1,48 @@
+.box {
+	width:200px;
+	height:200px;
+	background-color:peru;
+	border: 5px solid black;
+	display: inline-block;
+	margin:20px;
+}
+.box.greedy-box{
+	display: block;
+}
+.nudge{
+	position: relative;
+	top:50px;
+	left:70px;
+}
+
+.ghost-box {
+	position: absolute;
+	top:50px;
+	left:70px;
+}
+.fedex-truck{
+	/*margin-top:200px;*/
+	position:relative;
+}
+
+#nav{
+	text-align: center;
+	font-size: 30px;
+	background-color: peachpuff;
+	border-bottom: thin solid black;
+	height:50px;
+	position: fixed;
+	top:0%;
+	/*width:100%;*/
+}
+.navbar{
+	background-color:red;
+}
+
+.left{
+	float:left;
+}
+.lots-o-text{
+	/*clear:left;*/
+	overflow:hidden;
+}

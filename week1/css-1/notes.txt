@@ -1,0 +1,65 @@
+CSS Positioning
+
+Position property
+.whatever{
+	position : <vlues>;
+}
+
+Static - All elements have static positioning by default
+		 Considered to NOT be positioned
+
+Relative - Positioned relative to where they WOULD be
+		   as a statically positioned element
+		   Still take up space where they wouldbe  statically positioned
+
+Absolute - Positions the element relative to its closest
+		   positioned ancestor (or the body)
+		   DO NOT take up space - they're removed from the document flow
+
+Fixed - Positions element relative to the WINDOW
+
+
+CSS Specificity
+All selectors have specificity in CSS
+HIGHER specificity trumps LOWER specificity
+
+#some-div
+IDs      Classes      Tags
+1			0			0
+
+.some-other-div
+IDs      Classes      Tags
+0			1			0
+
+div p > span h1 > div > nav > ul > li p span span span marquee
+IDs      Classes      Tags
+0			0			13
+
+
+Display Types
+
+Block - (div, p, article, sections)
+		Full page width - do NOT share space on a line
+		Can HAVE dimensions
+
+Inline - (span, anchor, img, strong)
+		 Smaller, wrap their content - WILL share space on a line
+		 Can NOT have dimensions
+
+Inline-Block - (No default inline-block elements)
+				Sizeable like block level elements
+				WILL share space on a line
+				Can HAVE dimensions
+
+
+Floats Notes
+
+Floating an element removes it from the document flow (mostly)
+But allows text to wrap around it
+
+Clearing an element prevents it from sharing space on a line with floated elements
+
+Overflow
+Dictates how content that would normally overflow a container is displayed (auto, scroll, hidden, visible)
+
+When an element is floated and the other wrapping element has overflow:hidden, it creates a Block Formatting Context
