@@ -1,0 +1,30 @@
+.outer {
+    background-color: gray;
+    height: 600px;
+    text-align: center;
+    line-height: 600px;
+}
+/*div {
+    height: 100px;
+}*/
+.middle {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    background-color: papayawhip;
+}
+
+.inner {
+    vertical-align: middle;
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    margin: auto;
+    /*text-align: left;*/
+    display: inline-block;
+}
+
+.text {
+    vertical-align: middle;
+}

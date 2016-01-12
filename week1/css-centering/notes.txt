@@ -1,0 +1,12 @@
+Horizontal centering
+
+Block level element: use 'margin: auto;' on the element itself.
+
+Inline-block element: set 'text-align: center;' on the parent. Be careful of inherited font styles!
+
+
+
+Vertical centering
+
+set 'vertical-align: middle; display: inline-block;' on the element itself. set the parent's line height equal to its height.
+

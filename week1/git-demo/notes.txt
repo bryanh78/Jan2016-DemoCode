@@ -1,0 +1,16 @@
+Git helps us manage version control
+show all files, including hidden files: ls -a 
+
+create a new git repository from a folder: git init
+
+learn about the status of the repository: git status
+specify all files to commit: git add -A
+save a snapshot of the repository: git commit
+
+review past commits: git log
+
+add a remote repository: git remote add <remote name> <remote location>
+
+update a remote repository with local changes: git push origin master
+
+update a local repository with changes from a remote: git pull origin master
