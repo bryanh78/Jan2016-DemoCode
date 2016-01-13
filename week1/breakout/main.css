@@ -1,13 +1,13 @@
 .container{
-	height:500px;
-	margin:100px;
+	height: 500px;
+	margin: 100px;
 	background-color:#afF7cd;
 	position: static;
 }
 .container2{
 	background-color: red;
-	margin:20px;
-	height:200px;
+	margin: 20px;
+	height: 200px;
 }
 .ghost-box{
 	position: absolute;
