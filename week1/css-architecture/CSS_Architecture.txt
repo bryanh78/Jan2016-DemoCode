@@ -1,0 +1,141 @@
+
+Reusability
+
+Avoid tight coupling to promote reusability.
+=-=-=-=
+/* This selector is tightly coupled with a particular HTML structure.
+Selectors with many native elements are hard to reuse */
+#main div.content p.small-section span { font-family: fantasy; }
+
+-------
+
+/* This selector targets only a single class,
+so it is easy to flexibly apply these styles to many elements. */
+.special-text { font-family: fantasy; }
+=-=-=-=
+
+
+
+Style rules that are used frequently can be made into their own reusable class.
+=-=-=-=
+/* These selectors target classes, so they technically CAN be reused easily,
+but they are so specific, you'll probably only use them each once.
+.box1 {
+    height : 100px;
+    width : 100px;
+}
+.box2 {
+    height : 100px;
+    width : 100px;
+    overflow : hidden;
+}
+.box3 {
+    height : 100px;
+    width : 100px;
+    border-radius : 10px;
+}
+.box4 {
+    height : 100px;
+    width : 100px;
+    border-radius : 10px;
+    overflow : hidden;
+}
+
+-------
+
+/* We can achieve the same functionality with a smaller number of COMPOSABLE classes.
+These styles will be easier to reuse. */
+.box {
+    height : 100px;
+    width : 100px;
+}
+.flow-hider {
+    overflow : hidden;
+}
+.child-proof {
+    border-radius : 10px;
+}
+=-=-=-=
+
+
+If a large, independent component of your app gets repeated within that app,
+or across other apps, think of it as a MODULE, and group its styles together in their own file.
+=-=-=-=
+.sidebar-widget {
+    border : 1px solid black;
+    border-radius : 5px;
+    overflow : scroll;
+}
+.sidebar-widget ul.widget-list {
+    list-style-type: none;
+    padding : 0;
+    margin : 0;
+}
+.sidebar-widget ul.widget-list li {
+    display : inline-block;
+    padding : 5px;
+    border
+}
+=-=-=-=
+
+
+
+Maintainability
+
+Never assume you'll be the last person to maintain an app.
+=-=-=-=
+/* The dropdown menu should be on top of the content,
+but what if we need to show a tooltip on top of the dropdown? 
+It's almost impossible. */
+body #main #nav .nav-dropdown {
+    position : absolute;
+    z-index : 999999999 !important;
+}
+body #main #nav .tooltip {
+    position : absolute;
+    z-index : ...?
+}
+
+-------
+
+/* The tooltips are on top of the dropdowns, 
+but it's still easy to put other elements above/below/between them. */
+.nav-dropdown {
+    position : absolute;
+    z-index : 50;
+}
+.nav-tooltip {
+    position : absolute;
+    z-index : 60     
+}
+=-=-=-=
+
+Use SEMANTIC names to help remember what your styles are for.
+=-=-=-=
+/* No one else in the world knows what this means. In two weeks, neither will you */
+.nmen-tt { }
+
+-------
+
+/* You'll spend much more time reading code than writing code. 
+It's not worth saving 5 seconds of typing, if it costs 5 minutes of reading */
+.nav-menu-tooltip {}
+=-=-=-=
+
+Class names should not describe HOW something looks,
+as much as WHY it looks that way.
+=-=-=-=
+/* The green confirm buttons clash with the background color.
+If you rename the class to ".blue-button" then you have to update 
+all the references in your HTML. */
+.green-button {
+    background-color : green;
+}
+
+-------
+/* If these buttons need to change color, we can change this style rule,
+and leave our HTML untouched. */
+.confirm-button {
+    background-color : green;
+}
+=-=-=-=

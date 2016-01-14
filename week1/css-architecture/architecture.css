@@ -1,0 +1,97 @@
+#main div.content p.small-section span {
+    font-family: fantasy;
+}
+
+.special-text { font-family: fantasy; }
+
+
+
+
+
+.box1 {
+    height : 100px;
+    width: 100px;
+}
+.box2 {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+
+.box3 {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}
+.box4 {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+/* Instead of 4 specific classes, we have 3 COMPOSABLE classes*/
+.box {
+    height: 100px;
+    width: 100px;
+}
+
+.flow-hider {
+    overflow: hidden;
+}
+
+.child-proof {
+    border-radius: 10px;
+}
+
+
+
+.sidebar-widget {
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: scroll;
+}
+
+.sidebar-widget ul.widget-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-widget ul.widget-list li {
+    display : inline-block;
+    padding: 5px;
+}
+
+
+body #main #nav .nav-dropdown {
+    position: absolute;
+    z-index: 999999999 !important;
+}
+
+.nav-dropdown {
+    position: absolute;
+    z-index: 50;
+}
+
+/*nav-menu-tooltip.*/
+.nmen-tt {  }
+
+.nav-menu-tooltip {  }
+
+
+
+
+.green-button {
+    background-color: green;
+}
+
+.blue-button {
+    background-color: blue;
+}
+
+.confirm-button {
+    background-color: blue;
+}
+
+
