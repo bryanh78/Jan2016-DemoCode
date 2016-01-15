@@ -1,0 +1,67 @@
+*{
+	/*include padding and border as part of height/width*/
+	box-sizing : border-box;
+}
+body{
+	/*Resetting the body*/
+	margin: 0;
+	padding:0;
+}
+
+html{
+	font-size:40px;
+}
+.text-stuff{
+	font-size:2rem;
+	/*padding:2em;*/
+	
+}
+
+.container{
+	background-color:rgb(120, 200, 160);
+	/*height: 300px;*/
+	max-width:960px;
+	margin: auto;
+}
+
+.column-row{
+	overflow:hidden;
+}
+
+[class ^= "col-"]{
+	width 	  : 100%;
+	float 	  : left;
+	min-height: 40px;
+}
+
+/*Columns!  thirds / fourths*/
+@media screen and (min-width:960px){
+	.container{
+		background-color: burlywood;
+	}
+	.col-1-1{
+		width:100%;
+	}
+
+	.col-1-3{
+		width:33.333333%;
+	}
+	.col-2-3{
+		width:66.666667%;
+	}
+
+	.col-1-4{
+		width:25%;
+	}
+	.col-2-4{
+		width:50%;
+	}
+	.col-3-4{
+		width:75%;
+	}
+}
+@media screen and (min-width:1200px){
+	.container{
+		background-color: azure;
+	}
+}

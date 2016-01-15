@@ -1,0 +1,27 @@
+Responsive Web Design
+
+WHY?
+	- Mobile device usage is going up
+	- Device orientation
+	- Network speed / Data charges
+
+How are Devices different?
+	- Inputs
+	- TOUCH vs CLICK/HOVER
+	- RESOLUTIONS / PIXEL DENSITY
+	- OS/Browsers
+
+How do DESIGNERS fit into the picture?
+	- Getting better, but their tools aren't designed for multiple screen sizes at once
+	- Open communication between designers / devs is key
+
+Mobile First
+	- Designing and developing a site with mobile in mind
+	- How does your content need to change?
+
+Units in CSS
+	- px
+	- %
+	- vw / vh
+	- em
+	- rem
