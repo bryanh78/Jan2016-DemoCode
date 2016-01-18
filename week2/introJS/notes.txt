@@ -1,0 +1,57 @@
+in english, we write SENTENCES, composed of WORDS, which have TYPES (noun, verb)
+in javascript, we write STATEMENTS, which are composed (mostly) of VALUES, which have TYPES (number, string)
+
+Operators - tokens that let you combine 1, 2, or 3 values into a new value
+
+variables - a name that refers to a value
+Use the 'var' keyword, name the variable, use the assignment operator, and then the value to assign. 
+Variable names must contain only letters, numbers, $, and _.  They cannot start with a number.
+var 2fast2furious // not VALID
+var $$billz  // IS valid
+
+
+
+PRIMITIVE types
+
+Number
+number operators: +, -, *, /, %
+
+
+FizzBuzz
+Print the numbers from 1 - 15.
+
+If the number is divisible by 3, print 'Fizz' instead.
+If the number is divisible by 5, print 'Buzz' instead.
+If the number is divisible by 3 and 5, print 'FizzBuzz' instead.
+
+
+String
+string operators: + concatenation
+The + operator is overloaded, meaning it behaves differently depending on the types of its OPERANDS. For numbers, it performs addition, but for strings, it performs concatenation.
+
+If you use operators to combine values of different types, their types will be COERCED to the same type. 
+
+
+Strings have properties -  additional values that belong to the string
+length - the length of the string
+numerical indexes - individual characters of the string
+Strings are 0-indexed. The first character is index 0, the second is index 1, etc. 
+
+
+Boolean
+only 2 possible values: true, false
+
+Boolean operators
+! - the NOT operator is a UNARY operator, meaning it takes exactly 1 operand. 
+
+&& - and
+|| - or
+<, >, ===, ==, !=, <=, >=
+
+if-statements let us conditionally perform a set of instructions if some condition is true
+Start with the 'if' keyword. In parentheses, put the if-condition. If the condition is true, execute the code in the braces ( the if-body )
+An if-else chain starts with exactly 1 if statement, then has 0-infinite if else statements, and then has 0 or 1 else statement. 
+
+
+
+Non-primitive types
