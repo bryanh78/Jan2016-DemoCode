@@ -100,8 +100,83 @@ else {
     canDrink = false
 }
 
-console.log('Will you be served? ' + canDrink + '.')
+// console.log('Will you be served? ' + canDrink + '.')
+
+// console.log(null)
 
 
+if ( NaN ) {
+    console.log('hello!')
+}
 
 
+// LITERAL array
+[]
+
+
+var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+// console.log(days[2])
+// console.log(days.length)
+days[0] = 'Mondaaaaaaayyyy........'
+// console.log(days)
+
+// parentheses indicate that we are CALLING or INVOKING the method
+// days.push('RaphaelDay')
+// console.log(days)
+// console.log(days.length)
+// days.pop()
+// days.pop()
+// days.pop()
+// days.pop()
+// days.pop()
+// console.log(days)
+
+var x = 10
+// x++
+// x+=1
+// x = x + 1
+// console.log(x)
+
+// for ( var i = 0; i < days.length; i++ ) {
+//     // console.log(i)
+//     if ( days[i] === 'Saturday' ) {
+//         console.log('party!!')
+//     }
+//     else if ( days[i] === 'Sunday' ) {
+//         console.log('take a nap...')
+//     }
+//     else {
+//         console.log('work work work...')
+//     }
+// }
+
+// LITERAL object
+{}
+
+
+var sharkNado = {
+    title : 'Sharknado II',
+    genre : 'RomCom',
+    rating : '11/10',
+}
+
+// console.log(sharkNado.title)
+// console.log(sharkNado['rating'])
+// console.log(sharkNado)
+// for ( var key in sharkNado ) {
+//     console.log(sharkNado[key])
+
+// }
+
+var frozen = {
+    title : 'Frozen',
+    rating : 'nc-17',
+    genre : 'historical autobiography',
+}
+
+
+frozen['ye' + 'ar'] = 'recently'
+console.log(frozen)
+
+var myMovies = [sharkNado, frozen]

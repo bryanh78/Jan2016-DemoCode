@@ -15,7 +15,7 @@ PRIMITIVE types
 
 Number
 number operators: +, -, *, /, %
-
+++, --, +=
 
 FizzBuzz
 Print the numbers from 1 - 15.
@@ -50,8 +50,39 @@ Boolean operators
 
 if-statements let us conditionally perform a set of instructions if some condition is true
 Start with the 'if' keyword. In parentheses, put the if-condition. If the condition is true, execute the code in the braces ( the if-body )
-An if-else chain starts with exactly 1 if statement, then has 0-infinite if else statements, and then has 0 or 1 else statement. 
+An if-else chain starts with exactly 1 if statement, then has 0-infinite else if statements, and then has 0 or 1 else statement. 
 
 
+
+undefined is a type. There is only one value of type undefined: the value undefined.
+
+null is a type. There is only one value of type null: null
+
+every value is either truthy or falsey.
+0 and NaN are falsey values. All other numbers are truthey.
+'' is a falsey value. All other strings are truthey.
+null is falsey.
+undefined is falsey.
+All other values are truthey.
 
 Non-primitive types
+
+
+Array
+Arrays are lists of values
+
+[].push() add an item to the end of the array
+
+
+
+For loops
+
+First thing that happens is the loop initializes ONCE: var i = 0;
+
+At the start of every loop, the loop condition gets evaluated: i < days.length
+
+After every loop, the loop increments is evaluated: i++
+
+
+Object
+An object is a list of key-value pairs. Together, a key-value pair can be called a 'property'
