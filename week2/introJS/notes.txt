@@ -86,3 +86,21 @@ After every loop, the loop increments is evaluated: i++
 
 Object
 An object is a list of key-value pairs. Together, a key-value pair can be called a 'property'
+
+
+Functions - values that do things
+
+A Method is just a function that belongs to an object.
+
+When a return statement is executed, that ends the function execution.
+
+Built-in methods
+
+Split: turns a string into an array
+Split is a non-destructive method, meaning it does not modify the original array.
+
+Join: turns an array into a string
+
+push: adds an element to the end of the array
+pop: removes an element from the end of the array
+sort: sorts an array.

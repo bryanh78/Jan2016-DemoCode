@@ -177,6 +177,110 @@ var frozen = {
 
 
 frozen['ye' + 'ar'] = 'recently'
-console.log(frozen)
+// console.log(frozen)
 
-var myMovies = [sharkNado, frozen]
+var myMovies = [sharkNado, frozen];
+
+
+
+// LITERAL function
+// function(){
+//     console.log('hi')
+// }
+
+var calculateArea = function(height, width){ // this function takes two ARGUMENTS: height and width
+    var area = height * width;
+    return area // the RETURN statement defines the output of a function.
+}
+
+// console.log(typeof calculateArea())
+
+var result = calculateArea(10, 4) // we CALL a function by naming it, putting parentheses after it, and PASSING its ARGUMENTS in. 
+// console.log(calculateArea(11,3))
+// console.log(result)
+
+var anotherReference = calculateArea // this is another reference to the same function
+var squareFeet = anotherReference(100,200)
+// console.log(squareFeet)
+
+// console.log(typeof anotherReference)
+
+
+var myFunction = function(){
+
+}
+myFunction()
+var steve = { name : 'steve'}
+var janet = { name : 'janet'}
+
+// steve.someMethod = function(){ // you can define methods right on the object.
+
+// }
+steve.doSomething    = myFunction
+janet.doSomethingToo = myFunction
+
+
+steve.doSomething() // in addition to being a function, doSomething is a METHOD
+janet.doSomethingToo()
+
+
+var pluralize = function(word, number){
+    if ( number === 1 ) {
+        return word // only one return statement will run
+    }
+    else {
+        return word + 's'
+    }
+    return 1
+    return 2
+}
+
+// console.log(pluralize('chair', 1))
+// console.log(pluralize('mongoose', 17))
+
+var people = [
+    { name : 'Alice'},
+    { name : 'Bob'}
+]
+
+names = ['Alice', 'Bob']
+var bob = {
+    name : names[1]
+}
+
+
+var hello = 'hello!'
+// console.log(hello.toUpperCase())
+// console.log(hello.toLowerCase())
+
+var weekString = 'Monday Tuesday Wednesday Thursday Friday'
+
+var weekArray = weekString.split(' ')
+// console.log(weekArray)
+
+var weekString = weekArray.join(', ')
+// console.log(weekString)
+
+
+
+
+var concat =  function(word1, word2){
+    var output = word1 + ' ' + word2 // variables defined inside of a function are LOCAL to that function
+    return output
+}
+var sometOtherFunction = function(){
+    var output = 'output' // we're reusing a variable name, but our output variables are in different scopes, so they won't interfere with each other. 
+    return output
+}
+var sentence = concat('Write', 'code!')
+console.log(sentence)
+
+// console.log(output) // variables defined inside of a function cannot be accessed outside of that function
+
+var globalVariable = 5
+var whatsGlobal = function(){
+
+    return globalVariable
+}
+
+console.log(whatsGlobal())
