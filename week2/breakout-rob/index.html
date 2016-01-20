@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="genghisMod">
+<head>
+	<title>Breaking Angular</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+	<div ng-controller="mongoller">
+		<h4>{{greeting}}</h4>
+		
+		<button ng-click="addLiuKang()">Add A Liu Kang!</button>
+
+		<input ng-model="newWarrior.name" placeholder="Name">
+		<input ng-model="newWarrior.img" placeholder="Headshot">
+		<button ng-click="addWarrior()">Add A Warrior!</button>
+
+		<!-- ngRepeat - "element in list"-->
+		
+		<div ng-class="{'awesome-text' : $even, 'warrior-bg' : $odd }" ng-repeat="warrior in horde" >
+		<!-- ng-show/ng-if="$index % 2 !== 0" -->
+		<!-- ng-style="{color : textColor}" -->
+
+			<p>{{$index}} - {{warrior.name}}</p>
+			<img width="200" height="200" src="{{warrior.img}}">
+
+		</div>
+
+	</div>
+	<!-- <div ng-controller="mongoller2">
+		
+	</div> -->
+
+</body>
+</html>
