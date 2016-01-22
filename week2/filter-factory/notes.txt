@@ -1,0 +1,19 @@
+Factories / Services
+
+	- Objects that can be used in multiple places
+		- Can be used to share information between controllers
+
+	- Lazily instantiated - Only created when your application is actually USING it
+
+	- Singletons - Only ever instantiated ONCE
+
+	- $timeout, $http, $log, $filter - Built in services in Angular often start with a '$'
+
+
+Filters
+
+	- Used to format expression values in Angular
+	- Normally used inside of directives in your HTML
+		-CAN be used in your controllers (injectable)
+	- Make your own custom filters
+	- Good built in filters - orderBy, date, filter, currency
