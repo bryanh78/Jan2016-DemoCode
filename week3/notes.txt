@@ -1,0 +1,48 @@
+Functional Programming
+
+In javascript, functions are 'first-class citizens'
+That means that they can go anywhere.
+anotherFunction(oneFunction)
+var anotherFunction = function(){
+    var someFunction =function(){}
+    return someFunction
+}
+
+Imperative programming: use a series of commands to manipulate the state of the program.
+Functional programming is more declarative.
+
+Solve larger problems using smaller, COMPOSABLE functions.
+We want to avoid manipulating our data.
+
+var user = {
+    name : 'steve'
+}
+// This is a 'pure function'. It takes input, returns output, but doesn't have any SIDE-EFFECTS. It doesn't manipulate variables outside of its scope.
+
+var changeName = function(name){
+    var newUser = {name : name}
+    return newUser
+}
+
+var user = changeName('stevie')
+
+var fullName = function(user){
+    return user.first + ' ', + user.last
+}
+
+<button ng-click="doStuff()">button</button>
+// doStuff if a callback function. I never call it myself, javascript calls it for me when this button is clicked on. Because I can't control what is done with the return value, event handlers should have side effects in order to do productive things.
+$scope.foo = 0
+$scope.doStuff = function(){
+    $scope.foo = 10
+}
+
+forEach is a built-in method in javascript. When called off of an array, you can pass in a function, and that function will be called on each element of the array.
+
+map is a built-in array method in javascript. It returns a new array of the same length as the input array. The returns statement in the map callback determines WHAT each individual element is.
+
+filter is a built-in array method. It returns a new array that is at MOST the same length as the input array, but more likely it will return a shorter array. The return statement determines WHICH elements belong in the new array.
+
+reduce is a built-in array method. Reduce will produce a single value based some starting value, and then looking at each element of the array in order.
+
+sort is a built-in array method that modifies the array it is called on. It sorts the input array based on a callback function. Sort looks at each array element, 2 at a time (a,b). If the callback returns a positive number, a should be sorted before b. If it returns a negative number, b should be sorted before a. If it returns 0, we are indiffirent about the which one is first.  Sort is a DESTRUCTIVE function, meaning it modifies the original input.
