@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body ng-controller="myController">
+
+	<h1>We are wearing : {{costume}}</h1>
+	<h1 ng-bind="costume"></h1>
+
+	<button ng-click="clickParty($event)">Click me to party!</button>
+
+	<form ng-submit="costumeSubmission()">
+		<input placeholder="Enter a costume" ng-keydown="pressinDaKeys($event.which)" ng-model="myCostume">
+		<input type="submit">
+	</form>
+
+	<ul>
+		<!-- ELEMENT in ARRAY -->
+		<li ng-click="whichHulk($index)" ng-repeat="guest in partyPeople">
+			{{guest}}
+		</li>
+	</ul>
+
+</body>
+</html>

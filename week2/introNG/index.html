@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="bananaTree">
+<head>
+	<title>ANGULAR!</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.js"></script>
+	
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body ng-controller="bananaTroller">
+
+	<h1 class="{{greeting}}">Hey {{greeting}}?!?!</h1>
+	<h2 ng-bind="greeting"></h2>
+
+	<input ng-keyup="showGreeting()" ng-model="greeting">
+	<input ng-keyup="showUnicorn()" ng-model="unicorn.bestFriend">
+	<div>{{unicorn}}</div>
+
+</body>
+</html>

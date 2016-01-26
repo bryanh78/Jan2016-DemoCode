@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="fundayFriday">
+<head>
+	<title>Filters and Factories</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+
+	<div ng-controller="manicMonday">
+		{{day}}
+
+		<ul>
+			<li ng-repeat="menuItem in todaysMenu | orderBy:'-origin'">
+				
+				<h4>{{menuItem.name}}</h4>
+				<p>From : {{menuItem.origin}}</p>
+				<p>Roast :{{menuItem.roast | excite:$odd}}</p>
+
+
+			</li>
+		</ul>
+	</div>
+
+	<div ng-controller="tenaciousTuesday">
+		{{day}}
+		<ul>
+			<li ng-repeat="menuItem in todaysMenu">
+				
+				<h4>{{menuItem.name}}</h4>
+				<p>From : {{menuItem.origin}}</p>
+				<p>Roast :{{menuItem.roast}}</p>
+
+
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

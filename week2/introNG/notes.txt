@@ -1,0 +1,37 @@
+What is Angular?
+	- A Strongly Opinionated, MVC, Front-End Framework
+
+	* Strongly Opinionated
+		- All in one solution
+		- Does not play well with others
+		- Wants you to do something the 'Angular' way
+
+		- The 'Angular' way isn't always the best solution - sometimes the solution lives outside of Angular
+
+	* Front-End
+		- Framework that's concerned with the BROWSER
+		- Has ways of interacting with the back-end
+
+	* MVC - Model, View, Controller
+
+		Model : Data that drives your application
+
+		View  : What the user sees (visual representation of the model)
+
+		Controller : Glue between the model and the view
+
+		- Do not directly change the view
+			- Change the MODEL and have those changes propagate forward to the view
+
+			- Use DECLARATIVE programming to define relationships between the model and the view
+
+			- Contrasts with IMPERATIVE programming in which you directly manipulate the view with a sequence of commands
+
+
+https://cdnjs.com/
+
+
+
+
+
+
