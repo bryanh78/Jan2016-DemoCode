@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Child Scopes</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+
+	<div ng-controller="superController">
+		
+
+		<ul>
+
+			<li ng-repeat="(heroIndex, hero) in superHeroes">
+				<!-- var heroIndex = $index
+					 var hero = superHeroes[$index] 
+				-->
+				<h3>{{hero.name}} - {{$index}}</h3>
+				<h5>Powers : </h5>
+				<ul>
+					<li ng-repeat="power in hero.powers">
+						{{power}} - {{$index}} - {{heroIndex}}
+						<input ng-model="greeting.message" ng-click="showScope(hello)">
+					</li>
+				</ul>
+				
+			</li>
+		</ul>
+
+
+		<!-- <p>{{greeting}}</p> -->
+
+		<!-- <div ng-controller="batmanController">
+			{{greeting.message}}
+			<input ng-model="greeting.message">
+			{{$parent.hello}}
+		</div> -->
+
+
+	</div>
+</body>
+</html>

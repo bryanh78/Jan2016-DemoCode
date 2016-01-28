@@ -1,0 +1,58 @@
+$scope
+
+var outside = 'wassup'
+
+function exterior(){
+	// access to both OUTSIDE and INSIDE
+	var inside = 'hello'
+
+	function interior(){
+		// access to MYSTUFF, INSIDE, and OUTSIDE
+		var myStuff = 'stuff'
+	}
+
+}
+console.log(inside) // it no work
+
+
+Child Scopes
+
+	- Child scopes typically inherit from their parent scope
+		- Exceptions are : directives that create an ISOLATE scope
+						   directives that have a TRANSCLUDED scope
+						   	  Transcluded scopes are SIBLING scopes
+
+	- Some directives create child scopes
+		- ngRepeat (Copies properties from parent scope onto itself)
+		- ngView
+		- ngInclude
+		- ngSwitch
+		- Custom directives (if given the option)
+
+	- Other things that create Parent-Child scope relationships
+		- Nested ngControllers
+
+
+When working with ngModels - a good rule of thumb is to always have a '.' in your model
+
+
+
+									SuperController
+											|
+											|
+										\\Batman//
+											|
+											|
+									|-------|-------|
+									hero    hero    hero
+									|		|		|
+									|		|		|
+								   |--|	   |--|   |--|
+								   p  p    p  p   p  p
+
+
+
+
+
+
+
