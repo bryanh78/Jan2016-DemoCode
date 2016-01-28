@@ -1,0 +1,11 @@
+Errybody
+=========
+Angular - events and data
+common directives
+
+Reading documentation
+custom directives
+JS Array Methods
+
+
+Garbage collection with console Profiler
