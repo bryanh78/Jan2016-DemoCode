@@ -1,0 +1,10 @@
+`this` in a function refers to the object that function is attached to. If the function is not a method of an object, then `this` refers to the window.
+
+3 methods on functions that let you manipulate the value of `this`.
+
+call - lets you call a function using an arbitrary value for `this`.
+
+apply - works the same way as call, except that arguments are passed in as an array, instead of a comma separated list.
+
+
+bind - bind does not immediately call the function, but it returns a new function with a bound context.
