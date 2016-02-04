@@ -1,0 +1,14 @@
+'is a' relationships
+'has a' relationships
+
+a RESTAURANT has a MENU
+a PLATE has a FOODITEM
+
+a DOG is a MAMMAL
+a POODLE is a DOG
+
+a WHALE is a MAMMAL
+
+
+Only use inheritance if it save you code
+DRY - Don't Repeat Yourself
