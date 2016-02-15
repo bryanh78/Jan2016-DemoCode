@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div ng-controller="humpTroller">
+		<input multi="true" onchange="angular.element(this).scope().checkFile(this)" type="file">
 		
 		<form ng-submit="createCharacter()">
 			<input poker ng-model="character.name" placeholder="name">
@@ -20,8 +21,8 @@
 		<!-- cast.map(function(castMember){
 			return <HTML>
 		}) -->
-		<p ng-hide="$last" ng-repeat="castMember in getCast()" ng-click="chooseMember(castMember)">
-			{{castMember}}
+		<p ng-repeat="castMember in getCast()" ng-click="chooseMember(castMember)">
+			<span ng-bind="::castMember.name"></span>
 			<poker castMembers="cast"></poker>
 			
 
