@@ -1,0 +1,6 @@
+when you type http://google.com into the browser's url bar, what is actually happening?
+
+First, we need google's IP address.  We first contact the DNS (domain name system) server, saying we're looking for google.com. The DNS server tells us the IP address for google.com.
+
+Then, we send an HTTP GET request to google's ip address at port 80. 
+In response, google sends back a response with response HEADERS, that describe the response (was it successful? etc) and a response BODY, that contains the information we asked for.
