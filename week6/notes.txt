@@ -31,4 +31,16 @@ local file e.g. require('./localFile')
 core modules e.g. require('fs')
 
 installed e.g. require('underscore')
-    to install a module: npm install <module name>
+    to install a module and save it to your package.json: npm install <module name> --save
+
+semantic versioning: numbers projects using 3 numbers
+fail.feature.fix
+1.1.1
+
+2.0.0 // breaking changes! something might not work anymore
+1.2.0 // new feature! Check the documentation to see what was added
+1.1.2 // fix! a bug was removed, performance was improved, etc.
+
+ubuntu version 10.12 - october 2012.
+3.9
+4.0 - "Wordpress 4.0 is not a major release. It's just the number that comes after 3.9"

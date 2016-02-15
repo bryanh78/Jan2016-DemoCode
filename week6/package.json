@@ -1,0 +1,26 @@
+{
+  "name": "week6",
+  "version": "1.0.0",
+  "description": "this is a node project",
+  "main": "exports.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/username/repo_name.git"
+  },
+  "keywords": [
+    "key",
+    "words"
+  ],
+  "author": "me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/username/repo_name/issues"
+  },
+  "homepage": "https://github.com/username/repo_name#readme",
+  "dependencies": {
+    "underscore": "^1.7.0"
+  }
+}
