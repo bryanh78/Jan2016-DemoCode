@@ -1,0 +1,34 @@
+What is node.js?
+
+A javascript runtime environment.
+The v8 engine transplanted into the commandline
+
+How is node.js different from browser javascript?
+
+    No window object - (no global object)
+    No DOM
+    module system
+    file system access
+    networking access - send and receive requests
+    hardware access
+    node.js makes for a great server
+
+
+type `node` to access the node.js REPL: read, evaluate, print, loop.
+
+process.argv (the arguments vector) contains all the arguments passed into the script. The first argument is node.js. The second argument is the script that is being called. The other arguments are passed in at the command line. You can use process.argv.slice(2) to skip the first two arguments.
+
+Whatever VALUE is assigned to module.exports in one file can be REQUIREd in other files.
+
+write a node script that copies a text file.
+e.g. node copy.js source.txt destination.txt
+
+asynchronous : multiple events happening simultaneously
+
+
+3 places to require from:
+local file e.g. require('./localFile')
+core modules e.g. require('fs')
+
+installed e.g. require('underscore')
+    to install a module: npm install <module name>
