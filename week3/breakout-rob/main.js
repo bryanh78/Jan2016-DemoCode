@@ -8,24 +8,29 @@ angular.module('humpDay')
 		// console.log('hello')
 		// Our app is going to keep track of Its Always Sunny characters
 		$scope.cast = []
-
+		$scope.checkFile = function(element){
+			console.log('change', $scope)
+		    $scope.$apply(function() {
+		        $scope.myFile = element.files[0];
+		    });
+		}
 		$scope.createCharacter = function(){
 			// console.log('this is working')
 			// console.log($scope)
 			console.log('Email to check : ', $scope.character.email, checkEmail($scope.character.email))
 			
 			// Check to see if email is valid
-			if( checkEmail($scope.character.email) ){
+			// if( checkEmail($scope.character.email) ){
 
 				// $scope.character contains info from the form
 				$scope.cast.push($scope.character) // Salt N Peppa yall
 				$scope.character = {}
 				$scope.error = ""
 
-			}
-			else{
-				$scope.error = "You got a bad email bruh"
-			}
+			// }
+			// else{
+				// $scope.error = "You got a bad email bruh"
+			// }
 
 			console.log($scope.cast)
 		}
