@@ -1,11 +1,12 @@
 // Requires \\
 var express = require('express');
 var bodyParser = require('body-parser');
-
+var logger = require('morgan');
 // Create Express App Object \\
 var app = express();
 
 // Application Configuration \\
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
