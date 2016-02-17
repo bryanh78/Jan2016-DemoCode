@@ -1,5 +1,5 @@
 {
-  "name": "express-scaffold",
+  "name": "breakout",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.14.1",
-    "express": "^4.13.3",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
     "morgan": "^1.6.1"
   }
 }
