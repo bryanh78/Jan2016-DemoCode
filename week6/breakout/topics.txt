@@ -1,0 +1,23 @@
+HTTP Requests
+
+Node/Express
+	- paramaterized routes / routing in general
+	- what on 'req' is permanent
+	- common props/methods on req/res
+	- middleware
+	- error handling
+
+JSON files 
+	- what can we use them for?
+	- parse and stringify
+
+
+
+
+
+
+
+Request Data - query strings / Request body
+Angular routes vs express routes
+AJAX
+Interaction between FE / BE
