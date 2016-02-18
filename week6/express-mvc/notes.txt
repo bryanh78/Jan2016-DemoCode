@@ -1,0 +1,10 @@
+MVC
+
+Model, View, Controller
+
+M : Data - Structure and Storage
+V : Interface - What the user sees
+	Angular will be handling our views
+C : Glue between the model and the views
+	From what our data IS to what our users SEE
+	Take data from the CLIENT and store it (something meaningful)

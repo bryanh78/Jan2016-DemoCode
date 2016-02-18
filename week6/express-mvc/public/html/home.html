@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="FruitCity">
+<head>
+	<title>MVC</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="/js/FruitCity.js"></script>
+	
+	<script type="text/javascript" src="/js/FruitCity.fruitTroller.js"></script>
+	<script type="text/javascript" src="/js/FruitCity.fruitFactory.js"></script>
+		
+	
+</head>
+<body ng-controller="fruitTroller">
+	<h1>{{greeting}}</h1>
+	<form ng-submit="createFruit(newFruit)">
+		<input ng-model="newFruit.name" type="text" placeholder="name">
+		<input ng-model="newFruit.texture" type="text" placeholder="texture">
+		<input ng-model="newFruit.color" type="text" placeholder="color">
+		<input ng-model="newFruit.taste" type="text" placeholder="taste">
+		<input type="submit">
+		
+	</form>
+	
+	<div ng-repeat="fruit in fruits">
+		{{fruit.name}}
+		
+	</div>
+	
+</body>
+</html>
