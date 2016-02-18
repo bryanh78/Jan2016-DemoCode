@@ -1,0 +1,10 @@
+AJAX
+
+Asynchronous JavaScript And XML
+							JSON (AJAJ)
+
+Making HTTP requests without full page refreshes
+	Transfers data like normal
+	Often, we may use JSON data in our responses
+
+$http

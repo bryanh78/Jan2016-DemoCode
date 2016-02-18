@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="ModJaxx">
+<head>
+	<title>AJAX stuff</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+</head>
+<body ng-controller="controlJaxx">
+	<h1>{{greeting}}</h1>
+
+	<form ng-submit="makeMeASandwich()">
+		<input ng-model="newSandwich.name" placeholder="Name"></input>
+		<input ng-model="newSandwich.bread" placeholder="Bread"></input>
+		<input ng-model="newSandwich.toppings" placeholder="Toppings"></input>
+		<input type="submit"></input>
+
+	</form>
+
+	<div ng-show="!sandwiches[0].name">{{sandwichLoader}}</div>
+
+	<div ng-repeat="sandwich in sandwiches">
+		<h1>{{sandwich.name}} on {{sandwich.bread}}</h1>
+		<ul>
+			<li ng-repeat="topping in sandwich.toppings">
+				{{topping}}
+			</li>
+		</ul>
+
+	</div>
+</body>
+</html>

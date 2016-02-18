@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="pokeApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Andy has to catch them all</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body >
+    <!-- Connect your controller to the div -->
+    <div class="container" ng-controller="pokeController as pc">
+        <h1 class="jumbotron text-center">Andy's Pokedex</h1>
+        <div class="row">
+          <!-- Use bootstrap columns -->
+            <div class="col-xs-8">
+              <!-- Use ng-repeat to show all pokemon and add ng-click to display the pokemon clicked by calling the showPokemon passing a pokemon object-->
+                <button type="button" class="btn btn-info btn-xs" ng-repeat=" p in pc.allPokemon ">
+                  {{ p.name }}
+                </button>
+            </div>
+            <div class="col-xs-4">
+              <!-- Use ng-show to display the panel if a pokemon is selected -->
+                <div class="panel" >
+                    <h2>{{}}</h2>
+                    <img  alt="" />
+                    <hr>
+                    <dl class="dl-horizontal">
+                        <dt>Weight</dt>
+                        <dd>{{}}</dd>
+                        <dt>Speed</dt>
+                        <dd>{{}}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+​
+    <!-- Source in all the files you need -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="/js/pokemon.js"></script>
+​
+  </body>
+</html>
