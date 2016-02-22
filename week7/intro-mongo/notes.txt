@@ -1,0 +1,47 @@
+MongoDB
+
+Databases should be fast an efficient for writing/reading large amounts of data.
+
+SQL vs NoSQL
+
+SQL is a relational database
+Data is stored in a flat tabular system
+Very much like a spreadsheet
+very structured - demands a schema ( a blueprint that defines what types of data can be put in the database)
+Use a query-based language to access data (SQL - structured query language. vulnerable to SQL injection attacks)
+traditionally, SQL databases scale vertically. move the database to a faster, more powerful computer. This works fine for a while, but get expensive if you need to scale up a lot.
+
+NoSQL 
+Schemaless 
+many forms of NoSQL, e.g. key-value stores, graph-based, document-based.
+Scale horizonally very easily, adding more small servers to increase speed/capacity.
+use APIs to read/write data.
+
+
+MongoDB 
+faster than SQL flat-files and weak associations. 
+written in C++, so it's very fast.
+built-in support for horizontal scaling
+Documents are stored in JSON-like sets.
+
+Using mongodb
+
+first start the mongo server daemon: sudo mongod
+no command for actually creating a database. 'use' command will create a database if needed, or use an existing one.
+
+Typically, only one database is needed per app.
+Within our application, we'll have multiple collections that each keep track of a different type of data.
+show all databases: 'show dbs'
+show all collections in the currently USEd database: 'show collections'
+
+insert data into the database: db.fruits.insert({})
+find data: db.fruits.find({<query object>})
+
+find supports several query operators to add extra logic to the query.
+
+Create data - db.fruits.insert
+Read data - db.fruits.find
+Update data - db.fruits.update
+Delete data - db.fruits.remove
+
+pass two objects into update: query object describes what we're looking for (like with find()) and the update object describes what we want to do with the objects that we find. By default, update will replace the entire object that is found with the update object that is passed to find. For other behaviors, use update operators. To update multiple documents, pass in a third object to update: {multi:true}
