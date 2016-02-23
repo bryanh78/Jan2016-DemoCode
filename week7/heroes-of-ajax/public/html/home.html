@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="HeroesApp">
+<head>
+	<title>Heroes of AJAX!</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+	<script type="text/javascript" src="/js/heroesApp.js"></script>
+	<script type="text/javascript" src="/js/heroesApp.homeController.js"></script>
+
+</head>
+<body ng-controller="homeController">
+	{{greeting}}
+
+	<form ng-submit="createHero()">
+		<input ng-model="newHero.name" placeholder="name"></input>
+		<input ng-model="newHero.powers" placeholder="powers"></input>
+		<input ng-model="newHero.MP" placeholder="MP"></input>
+		<input ng-model="newHero.HP" placeholder="HP"></input>
+		<input ng-model="newHero.weaknesses" placeholder="weaknesses"></input>
+		<input ng-model="newHero.costume" placeholder="costume"></input>
+		<input ng-model="newHero.bestFriend" placeholder="best friend"></input>
+
+		<input type="submit"></input>
+	</form>
+
+	<ul>
+		<li ng-repeat="hero in heroes">{{hero.name}}</li>
+	</ul>
+
+
+</body>
+</html>
