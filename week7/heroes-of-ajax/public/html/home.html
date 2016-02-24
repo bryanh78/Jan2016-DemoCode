@@ -23,7 +23,9 @@
 	</form>
 
 	<ul>
-		<li ng-repeat="hero in heroes">{{hero.name}}</li>
+		<li ng-repeat="hero in heroes">
+			<a href="/api/heroes/{{hero._id}}">{{hero.name}}</a>
+		</li>
 	</ul>
 
 

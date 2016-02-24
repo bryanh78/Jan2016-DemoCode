@@ -19,6 +19,7 @@ function createHero (req, res){
 }
 
 function getHeroes (req, res){
+	console.log('params', req.params)
 	// Get ONE
 	if(req.params.heroID){
 		Hero.findOne({_id : req.params.heroID}, function(err, doc){
@@ -28,6 +29,7 @@ function getHeroes (req, res){
 	// Get MANY
 	else{
 		Hero.find({}, function(err, docs){
+			// Find will ALWAYS give you back an array, even if it finds one or none
 			res.send(docs)
 		})
 	}

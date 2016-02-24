@@ -22,7 +22,10 @@ app.get('/', function(req, res){
 var heroesCtrl = require('./controllers/heroesCtrl.js')
 // GET
 app.get('/api/heroes', heroesCtrl.getHeroes)
+//"http://localhost:3000/api/heroes"
+
 app.get('/api/heroes/:heroID', heroesCtrl.getHeroes)
+//"http://localhost:3000/api/heroes/56cc94ee4e06810c3539d2bc"
 // POST
 app.post('/api/heroes', heroesCtrl.createHero)
 
@@ -32,3 +35,9 @@ app.listen(port, function(){
   console.log('Server running on port ' + port);
 
 })
+
+
+// Module.exports / Require trace
+// exports 	     require
+// MODEL      => CONTROLLER
+// CONTROLLER => SERVER.JS
