@@ -1,0 +1,27 @@
+Juggling files
+	MVC
+AJAX
+Nested Async flow
+
+mongoose -> Find[] vs FindOne{}
+
+Visual Representation of MVC
+
+Storing images on AWS
+
+jade & server side templating
+hacking?!
+node web scraping
+
+
+
+
+
+
+Heroes of Ajax pt 2
+
+var myData = require('./someJSON.json')
+mongoose.connect(myData.mongodbURI)
+{
+	"mongodbURI" : "mongodb://localhost/someDB"
+}
