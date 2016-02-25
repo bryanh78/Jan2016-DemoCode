@@ -12,6 +12,12 @@ function homeController ($scope, $http){
 				$scope.newHero = {}
 			})
 	}
+	$scope.createHQ = function(){
+		$http.post('/api/hqs', $scope.newHQ)
+			.then(function(returnData){
+				$scope.newHQ = {}
+			})
+	}
 
 	$http.get('/api/heroes')
 		.then(function(returnData){

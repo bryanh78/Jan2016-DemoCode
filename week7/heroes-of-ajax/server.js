@@ -19,7 +19,13 @@ app.get('/', function(req, res){
   res.sendFile('home.html', {root : './public/html'})
 });
 
+app.get('/heroes/:heroID', function(req, res){
+	res.sendFile('hero.html', {root : './public/html'})
+})
+
 var heroesCtrl = require('./controllers/heroesCtrl.js')
+var hqCtrl = require('./controllers/hqCtrl.js')
+
 // GET
 app.get('/api/heroes', heroesCtrl.getHeroes)
 //"http://localhost:3000/api/heroes"
@@ -28,6 +34,12 @@ app.get('/api/heroes/:heroID', heroesCtrl.getHeroes)
 //"http://localhost:3000/api/heroes/56cc94ee4e06810c3539d2bc"
 // POST
 app.post('/api/heroes', heroesCtrl.createHero)
+
+
+app.post('/api/hqs', hqCtrl.createHQ)
+
+
+
 
 // Creating Server and Listening for Connections \\
 var port = 3000
