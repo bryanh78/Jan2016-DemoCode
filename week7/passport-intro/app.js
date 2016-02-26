@@ -34,7 +34,6 @@ var User = mongoose.model('user', userSchema);
 
 
 /** Passport Config **/
-var bcrypt = require('bcryptjs')
 var passport = require('passport')
 var LocalStrategy = require('passport-local').Strategy;
 app.use(passport.initialize());
@@ -50,6 +49,7 @@ passport.deserializeUser(function(id, done) {
 });
 
 // When someone tries to log in to our site, how do we determine that they are who they say they are?
+var bcrypt = require('bcryptjs')
 passport.use(new LocalStrategy(
     function(username, password, done) {
         User.findOne({ username: username }, function (err, user) {
@@ -77,6 +77,7 @@ app.isAuthenticated = function(req, res, next){
         return next();
     }
     // If not, redirect to login
+    console.log('get outta here!')
     res.redirect('/');
 }
 
@@ -93,7 +94,7 @@ app.isAuthenticatedAjax = function(req, res, next){
 
 app.isSteveAuthenticated = function(req, res, next){
     // If the current user is logged in...
-    if(req.isAuthenticated() && req.user.username === 'steve'){
+    if(req.isAuthenticated() && req.user.permissions.admin === true){
     // Middleware allows the execution chain to continue.
         return next();
     }
@@ -104,12 +105,15 @@ app.isSteveAuthenticated = function(req, res, next){
 
 
 app.get('/', function(req, res){
+    if (!req.session.count ) { req.session.count = 0}
+    console.log(req.session.count++)
+    console.log(req.user)
     res.sendFile('/html/login.html', {root: './public'})
 })
 
 
 app.post('/signup', function(req, res){
-    bcrypt.genSalt(10, function(error, salt){
+    bcrypt.genSalt(11, function(error, salt){
         bcrypt.hash(req.body.password, salt, function(hashError, hash){
             var newUser = new User({
                 username: req.body.username,
