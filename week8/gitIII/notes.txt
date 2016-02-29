@@ -1,0 +1,42 @@
+Git Flow
+
+
+Long-term branches
+Master - MUST not break. Master branch has the live version of the code.
+Master gets updated in periodic releases.  
+Develop - SHOULD not break. 
+
+
+
+Short-term branches
+
+feature branches, e.g. feature/marquee
+    git checkout develop
+    git branch feature/marquee
+    git pull origin develop
+    git merge develop
+    git checkout develop
+    git merge feature/marquee
+    git branch -d feature/marquee
+    git push origin :feature/marquee
+
+bugfix branch, e.g. bugfix/marquee
+    git checkout develop
+    git branch bugfix/marquee
+    git pull origin develop
+    git merge develop
+    git checkout develop
+    git merge bugfix/marquee
+    git branch -d bugfix/marquee
+    git push origin :bugfix/marquee
+
+
+hotfix branch, e.g. hotfix/authentication
+    git checkout master
+    git branch hotfix/authentication
+    git checkout master
+    git merge hotfix/authentication
+    git checkout develop
+    git merge hotfix/authentication
+    git branch -d hotfix/authentication
+    git push origin :hotfix/authentication
