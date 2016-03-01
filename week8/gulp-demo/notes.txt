@@ -1,0 +1,37 @@
+Gulp
+Grunt
+Cake
+
+Companies that use Gulp
+	Netflix
+	NHL
+	OpenTable
+	Ionic
+	Dell
+	Tumble
+	Go Daddy
+	SoundCloud
+	Thinkster
+
+Things Gulp Does
+	- Compile Pre-processors (Stylus, Coffeescript, etc)
+	- Minification -> can minify both css and js
+	- Concatenation -> 12 js files : 1 js file
+	- Run tests
+	- Watch files for changes
+
+Install Gulp
+	make sure your package.json.name isn't 'gulp'
+	global - <sudo> npm install -g gulp
+	local  - npm install gulp --save-dev
+
+To create a Gulpfile
+	- Gulpfile.js
+	- gulpfile.js
+
+
+Plugins we're using
+	- gulp
+	- gulp-concat
+	- gulp-uglify
+	- gulp-minify-css

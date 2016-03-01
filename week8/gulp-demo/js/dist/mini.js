@@ -1,0 +1,1 @@
+function potatoStuff(o,t){console.log(o,t)}function dotheStuff(){console.log(arguments)}var myAwesomeVariable="potato";potatoStuff("fingerling","sweet");var something=[1,2,3],anotherthing="more potatoes please",somethingelse="yes";something.forEach(function(o,t,e){dotheStuff(o,e),console.log("stuff")});
