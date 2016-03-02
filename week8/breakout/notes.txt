@@ -1,0 +1,16 @@
+
+Passport
+Angular Routing
+Angular Resource
+GIT - reverting to a previous commit
+
+Node webscraper
+Hacking
+push to deploy
+
+
+
+AFTERNOON
+Uploading images 
+	fs.writeFile
+	aws
