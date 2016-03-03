@@ -1,0 +1,55 @@
+What is REST?
+
+REpresentational State Transfer
+A style of organizing API routes
+
+REST is not a tool/library/framework
+REST is not a standardized protocol
+
+
+1: REST API should return JSON data.
+2: REST API is stateless
+    - Server does not keep track of clients in between requests
+    - each individual request must supply all the information that the API needs to satisfy the request
+
+3: RESTful API uses HTTP verbs semantically
+    GET
+        commonly used for retrieving resources
+        defined as SAFE - a client can request this route many, many times, and it will have no permanent effect on the server
+        /api/v2/users/123
+    PUT
+        commonly used for creating a specific resource, or modifying a specific resource
+        defined as IDEMPOTENT - requesting this route once has the same effect as requesting it many times
+        /api/v2/users/123 - {name:'Alice',job:'blacksmith'}
+    DELETE
+        commonly used for deleting a specific resource
+        defined as IDEMPOTENT
+        /api/v2/users/123
+    POST
+        not IDEMPOTENT - each POST request may modify server state
+        typically used for creating new resources
+        /api/v2/users {name:'Bob', job: 'gardener'}
+        /api/transaction/321 {type: 'deposit', amount: 100} - this is a RESTful call
+        /api/deposit/100/321 - not RESTful
+
+4: RESTful APIs should use meaningful HTTP response codes
+    201 - created
+    204 - no content
+    304 - not modified
+
+
+the HTTP method describes the VERB we want to use. The URL describes the NOUN (resource) that we want to modify
+
+
+when to use/not use REST?
+
+use REST to make resources available to clients
+
+not all HTTP verbs makes sense for every resource
+
+
+/delta - returned data, is SAFE, used to be a GET route.
+
+REST purists suggested the REPORT method.
+
+dropbox just made it a POST route
