@@ -55,7 +55,7 @@ passport.use(new LocalStrategy(
         User.findOne({ username: username }, function (err, user) {
             if (err) { return done(err); }
             if (!user) {
-                return done(null, false, { message: 'Incorrect username.' });
+                return done(null, false);
             }
             // If we got this far, then we know that the user exists. But did they put in the right password?
             bcrypt.compare(password, user.password, function(error, response){
@@ -121,14 +121,14 @@ app.post('/signup', function(req, res){
             });
             newUser.save(function(saveErr, user){
                 if ( saveErr ) { res.send({ err:saveErr }) }
-                else { 
+                else {
                     req.login(user, function(loginErr){
                         if ( loginErr ) { res.send({ err:loginErr }) }
                         else { res.send({success: 'success'}) }
                     })
                 }
             })
-            
+
         })
     })
 })
@@ -159,4 +159,3 @@ app.get('/api/me', app.isAuthenticatedAjax, function(req, res){
 
 
 app.listen(3000)
-
