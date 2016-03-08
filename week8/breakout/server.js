@@ -52,6 +52,21 @@ var userCtrl = require('./controllers/userController.js')
 app.get('/', function(req, res){
   res.sendFile('main.html', {root : './public/html/'})
 });
+app.get('/angular', function(req, res){
+  res.sendFile('angular.html', {root : './public/html/'})
+});
+
+
+app.get('/me', function(req, res){
+	// send the logged in user back down
+	res.send({user : req.user})
+})
+
+app.get('/logout', function(req, res){
+	req.logOut()
+	res.redirect('/')
+})
+
 
 app.post('/signup', userCtrl.userSignup)
 app.post('/login', userCtrl.userLogin)

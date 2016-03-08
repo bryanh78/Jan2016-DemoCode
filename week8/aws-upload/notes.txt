@@ -1,0 +1,10 @@
+Routing
+  - 2 Things to get Routing to work
+    1. ngView directive
+        - denotes where our HTML templates will live
+    2. Route definitions ($routeProvider)
+
+angular.module('ngRoute').service('$routeProvider', function(){})
+
+
+ngResource

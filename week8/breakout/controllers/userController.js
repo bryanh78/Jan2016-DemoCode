@@ -31,7 +31,7 @@ function userLogin (req, res, next){
         if (!user) { return res.send({error : 'something went wrong :('}); }
         req.logIn(user, function(err) {
             if (err) { return next(err); }
-            return res.send({success:'success'});
+            return res.redirect('/angular');
         });
     })(req, res, next);
 }

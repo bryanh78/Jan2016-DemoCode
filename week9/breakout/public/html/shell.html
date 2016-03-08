@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="RobotTurkeyMapleLeaf">
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+	<title>Routing Stuff</title>
+	<!-- Jquery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<!-- BS JS -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- Base Angular -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+	<!-- Angular Route -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+
+	<!-- Our JS files -->
+	<script type="text/javascript" src="/js/app.js"></script>
+</head>
+<body>
+
+<!-- Pulls in a template and drops it inside of ng-include -->
+	<ng-include src="'/html/navbar.html'"> </ng-include>
+
+<!-- ngView is where $routeProvider drops templates -->
+	<div class="container" ng-view></div>
+	
+</body>
+</html>

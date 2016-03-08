@@ -1,0 +1,6 @@
+<img style="width:400px;height:400px" ng-src="{{hero.costume}}">
+<h1>{{hero.name}} - {{hero.HQ.name}}</h1>
+<h3>Protected by {{hero.HQ.moatType}} moat.</h3>
+<ul>
+	<li ng-repeat="amenity in hero.HQ.amenities">{{amenity}}</li>
+</ul>
